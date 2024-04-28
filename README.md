@@ -10,13 +10,13 @@ To get the category number in python
 
 '''
 
-    directory = os.getcwd()
-    images_dir = os.path.join(directory, 'Processed_Images_Square')
+directory = os.getcwd()
+images_dir = os.path.join(directory, 'Processed_Images_Square')
 
-    for root, dirs, files in os.walk(images_dir):
-        for file in files:
+for root, dirs, files in os.walk(images_dir):
+    for file in files:
 
-            # cat_num is the number representing that category
-            cat_num = int(file.split('_')[0])
+        # cat_num is the number representing that category
+        cat_num = int(file.split('_')[0])
 
 '''
