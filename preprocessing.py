@@ -137,7 +137,6 @@ def crop_image_square():
 
 
 def count_categories():
-
     images_dir = os.path.join(directory, 'Processed_Images_Square')
 
     categories = {}
