@@ -8,7 +8,7 @@ e.g. file "00_1271.jpg" is a dog of the category 00 which happens to be a chihua
 
 To get the category number in python 
 
-'''
+~~~python
 
     directory = os.getcwd()
     images_dir = os.path.join(directory, 'Processed_Images_Square')
@@ -19,4 +19,4 @@ To get the category number in python
             # cat_num is the number representing that category
             cat_num = int(file.split('_')[0])
 
-'''
+~~~
