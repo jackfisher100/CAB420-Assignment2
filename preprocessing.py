@@ -19,13 +19,14 @@ def count_categories():
 
     for root, dirs, files in os.walk(images_dir):
         for file in files:
+            if not file.startswith('.DS'):
 
-            cat_num = int(file.split('_')[0])
+                cat_num = int(file.split('_')[0])
 
-            if cat_num not in categories:
-                categories[cat_num] = 1
-            else:
-                categories[cat_num] += 1
+                if cat_num not in categories:
+                    categories[cat_num] = 1
+                else:
+                    categories[cat_num] += 1
 
 
     y = numpy.zeros(len(categories))
@@ -46,7 +47,8 @@ def count_categories():
     plt.ylabel("No. of photos in each category")
     plt.title("Distribution of categories")
     plt.show()
-        
+
+    return categories
 
 
 def dog_num_to_name(num):
@@ -60,9 +62,6 @@ def dog_num_to_name(num):
             
 
     return None
-
-
-
 
 
 if __name__ == '__main__':
