@@ -51,7 +51,7 @@ def count_categories():
 
 def dog_num_to_name(num):
 
-    with open('cat_num_to_names.txt', 'r') as f:
+    with open('dog_num_to_names.txt', 'r') as f:
         c = csv.reader(f)
 
         for row in c:
@@ -67,4 +67,4 @@ def dog_num_to_name(num):
 
 if __name__ == '__main__':
     # count_categories()
-    print(dog_num_to_name(20))
+    print(count_categories())
